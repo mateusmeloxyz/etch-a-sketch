@@ -1,5 +1,6 @@
-let size = 28;
+var density;
 
+function createBoard(size){
 const board = document.getElementById("board");
 board.style.textAlign = "center";
 
@@ -16,3 +17,23 @@ for( let i = 0 ; i < size ; i++ ){
     }
     board.appendChild(wrapper);
 }
+
+return size;
+}
+
+function clearBoard(){
+    board.replaceChildren();
+}
+
+function resetBoard(){
+    clearBoard();
+    density = createBoard(density);
+    console.log(density);
+}
+
+function changeDensity(){
+    clearBoard();
+    density = createBoard(prompt("Enter new pixel density (between 1 and 128"));
+}
+
+density = createBoard(16);
