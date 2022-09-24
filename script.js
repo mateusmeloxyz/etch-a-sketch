@@ -1,37 +1,37 @@
 var density;
 
-function createBoard(size){
-const board = document.getElementById("board");
-board.style.textAlign = "center";
+function createBoard(size) {
+    const board = document.getElementById("board");
+    board.style.textAlign = "center";
 
-for( let i = 0 ; i < size ; i++ ){
-    const wrapper = document.createElement("div");
-    wrapper.classList.add("wrapper");
-    for( let j = 0 ; j < size ; j++ ){
-        const pixel = document.createElement("div");
-        pixel.classList.add("pixel");
-        wrapper.appendChild(pixel);
-        pixel.addEventListener("mouseover", (e) => {
-            e.target.classList.add("colored");
-        })
+    for (let i = 0; i < size; i++) {
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("wrapper");
+        for (let j = 0; j < size; j++) {
+            const pixel = document.createElement("div");
+            pixel.classList.add("pixel");
+            wrapper.appendChild(pixel);
+            pixel.addEventListener("mouseover", (e) => {
+                e.target.classList.add("colored");
+            })
+        }
+        board.appendChild(wrapper);
     }
-    board.appendChild(wrapper);
+
+    return size;
 }
 
-return size;
-}
-
-function clearBoard(){
+function clearBoard() {
     board.replaceChildren();
 }
 
-function resetBoard(){
+function resetBoard() {
     clearBoard();
     density = createBoard(density);
     console.log(density);
 }
 
-function changeDensity(){
+function changeDensity() {
     clearBoard();
     density = createBoard(prompt("Enter new pixel density (between 1 and 128"));
 }
