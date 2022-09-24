@@ -22,7 +22,7 @@ function createBoard(size) {
 }
 
 function validateDensity(input){
-    input = Math.min(input,128);
+    input = Math.min(input,80);
     input = Math.max(input,1);
     return input;
 }
@@ -38,7 +38,7 @@ function resetBoard() {
 
 function changeDensity() {
     clearBoard();
-    density = createBoard(validateDensity(prompt("Enter new pixel density (between 1 and 128")));
+    density = createBoard(validateDensity(prompt("Enter new pixel density (between 1 and 80")));
 }
 
 density = createBoard(16);
