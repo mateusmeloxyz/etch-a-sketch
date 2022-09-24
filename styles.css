@@ -4,21 +4,44 @@ html {
 
 *, *:before, *:after {
 	box-sizing: inherit;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    height: 100vh;
+    background: #333;
 }
 
 #board {
-    outline: 2px solid limegreen;
+    outline: 2px solid greenyellow;
     display: flex;
-    flex-wrap: wrap;
-    max-width: 256px;
-    max-height: 256px;
+    flex-direction: column;
+    width: 512px;
+    height: 512px;
+    background: white;
 }
 
-#board .pixel {
-    width: 16px;
-    height: 16px;
+#board .wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.pixel {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
 }
 
 .pixel.colored {
-    background-color: brown;
+    background-color: lightpink;
+}
+
+button {
+    margin: 8px;
+    padding: 8px;
 }
