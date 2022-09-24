@@ -7,6 +7,7 @@ html {
 }
 
 #board {
+    outline: 2px solid limegreen;
     display: flex;
     flex-wrap: wrap;
     max-width: 256px;
@@ -14,7 +15,10 @@ html {
 }
 
 #board .pixel {
-    outline: 2px solid lightgreen;
     width: 16px;
     height: 16px;
+}
+
+.pixel.colored {
+    background-color: brown;
 }
