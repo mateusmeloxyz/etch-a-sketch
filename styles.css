@@ -1,0 +1,20 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 256px;
+    max-height: 256px;
+}
+
+#board .pixel {
+    outline: 2px solid lightgreen;
+    width: 16px;
+    height: 16px;
+}
