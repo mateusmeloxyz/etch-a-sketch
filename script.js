@@ -21,19 +21,24 @@ function createBoard(size) {
     return size;
 }
 
+function validateDensity(input){
+    input = Math.min(input,128);
+    input = Math.max(input,1);
+    return input;
+}
+
 function clearBoard() {
     board.replaceChildren();
 }
 
 function resetBoard() {
     clearBoard();
-    density = createBoard(density);
-    console.log(density);
+    density = createBoard(validateDensity(density));
 }
 
 function changeDensity() {
     clearBoard();
-    density = createBoard(prompt("Enter new pixel density (between 1 and 128"));
+    density = createBoard(validateDensity(prompt("Enter new pixel density (between 1 and 128")));
 }
 
 density = createBoard(16);
